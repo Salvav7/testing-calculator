@@ -48,6 +48,20 @@ describe('Ui Addition - Component', () => {
     // Assert
     expect(result).toBe(0);
   });
+  
+  it('Should call exp method', () => {
+    // Arrange
+    let result = 0;
+    component.operator1 = 2;
+    component.operator2 = 2;
+
+    // Act
+    component.exp();
+    result = component.result;
+
+    // Assert
+    expect(result).toBe(4);
+  });
 
 
 
@@ -110,6 +124,21 @@ describe('Ui Addition - Component', () => {
 
    });
 
+
+   it('should exp operator1 and operator2 when i click the exp button ', () => {
+    // Arrange 
+    component.operator1 = 5;
+    component.operator2 = 2;
+    let expButton = fixture.debugElement.query(By.css('.exp-button'));
+
+    // Act
+    expButton.triggerEventHandler('click', null);
+
+    // Assert
+    expect(component.result).toBe(25);
+
+   });
+
   it('Should render sum in result div', () => {
     // Arrange
     component.operator1 = 5;
@@ -141,6 +170,23 @@ describe('Ui Addition - Component', () => {
 
     // Assert
     expect(el.innerText).toContain('0');
+     
+  });
+
+  it('Should render exp in result div', () => {
+    // Arrange
+    component.operator1 = 8;
+    component.operator2 = 2;
+ 
+    // Act
+    component.exp();
+    fixture.detectChanges();
+    
+    let de = fixture.debugElement.query(By.css('.result'));
+    let el : HTMLElement = de.nativeElement;
+
+    // Assert
+    expect(el.innerText).toContain('64');
      
   });
 

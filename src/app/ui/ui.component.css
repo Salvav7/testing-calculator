@@ -34,3 +34,7 @@
     color: green;
 }
 
+.exp-button {
+    cursor: pointer;
+    color: red;
+}

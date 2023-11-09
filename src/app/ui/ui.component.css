@@ -38,3 +38,8 @@
     cursor: pointer;
     color: red;
 }
+
+.multiplication-button {
+    cursor: pointer;
+    color: yellow;
+}

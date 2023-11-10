@@ -1,65 +1,106 @@
+:host {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+
 .calculator {
-    width: 150px;
+    width: 200px;
     text-align: center;
-    color: #999;
+    color: #757373;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin: 20px;
 }
 
 .result {
     font-size: 3.0em;
     font-weight: bold;
     color: red;
+    margin-bottom: 20px;
+}
 
+.operator1, .operator2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .operator1 {
-    font-size: 1.5em;
-    font-weight: bold;
     color: black;
-
 }
 
 .operator2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: blue;
-
-}
-
-.addition-button {
-    cursor: pointer;
     color: blue;
 }
-.substraction-button {
+
+.addition-button, 
+.substraction-button, 
+.exp-button, 
+.multiplication-button, 
+.division-button, 
+.square-button, 
+.sqr-button, 
+.porcentaje-button, 
+.radianes-button {
     cursor: pointer;
-    color: green;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 150px;  /* Ancho fijo para todos los botones */
+    height: 50px; /* Altura fija para todos los botones */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.exp-button {
-    cursor: pointer;
-    color: red;
+.addition-button:hover {
+    background-color: rgb(50, 98, 255);
+    color: white;
 }
 
-.multiplication-button {
-    cursor: pointer;
-    color: yellow;
+.substraction-button:hover {
+    background-color: rgb(54, 150, 54);
+    color: white;
 }
 
-.division-button {
-    cursor: pointer;
-    color: orange;
+.exp-button:hover {
+    background-color: rgb(241, 69, 69);
+    color: white;
 }
 
-.square-button {
-    cursor: pointer;
-    color: purple;
+.multiplication-button:hover {
+    background-color: rgb(15, 166, 168);
+    color: white;
 }
 
-.sqr-button{
-    cursor: pointer;
-    color: brown;
+.division-button:hover {
+    background-color: rgb(250, 179, 47);
+    color: white;
 }
 
-.porcentaje-button{
-    cursor: pointer;
-    color: pink;
+.square-button:hover {
+    background-color: rgb(164, 45, 164);
+    color: white;
+}
+
+.sqr-button:hover {
+    background-color: brown;
+    color: white;
+}
+
+.porcentaje-button:hover {
+    background-color: rgb(249, 161, 175);
+    color: white;
+}
+
+.radianes-button:hover {
+    background-color: rgb(146, 145, 145);
+    color: white;
 }

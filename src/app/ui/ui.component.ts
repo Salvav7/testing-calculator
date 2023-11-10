@@ -7,6 +7,7 @@ import { division } from "../division/division";
 import { sqrt } from "../sqrt/sqrt";
 import { sqr } from "../sqr/sqr";
 import { porcentaje } from "../porcentaje/porcentaje";
+import { radianes } from "../radiantes/radianes";
 
 @Component({
   selector: "app-ui",
@@ -67,6 +68,12 @@ export class UiComponent implements OnInit {
   porcentaje() {
     let myresult = 0;
     myresult = porcentaje(this.operator1, this.operator2);
+    this.result = myresult;
+  }
+
+  radianes() {
+    let myresult = 0;
+    myresult = radianes(this.operator1);
     this.result = myresult;
   }
 }

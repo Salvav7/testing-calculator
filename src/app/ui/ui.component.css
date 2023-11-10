@@ -48,3 +48,8 @@
     cursor: pointer;
     color: orange;
 }
+
+.square-button {
+    cursor: pointer;
+    color: purple;
+}

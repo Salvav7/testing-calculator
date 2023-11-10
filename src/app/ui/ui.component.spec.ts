@@ -90,6 +90,19 @@ describe("Ui Addition - Component", () => {
     expect(result).toBe(1);
   });
 
+  it("should call sqrt method", () => {
+    // Arrange
+    let result = 0;
+    component.operator1 = 4;
+
+    // Act
+    component.sqrt();
+    result = component.result;
+
+    // Assert
+    expect(result).toBe(2);
+  });
+
   it("Should set operator1 model through ngModel", async () => {
     // Arrange
     await fixture.whenStable();
@@ -193,6 +206,18 @@ describe("Ui Addition - Component", () => {
     expect(component.result).toBe(2.5);
   });
 
+  it("should sqrt operator1 when i click the sqrt button ", () => {
+    // Arrange
+    component.operator1 = 4;
+    let sqrtButton = fixture.debugElement.query(By.css(".square-button"));
+
+    // Act
+    sqrtButton.triggerEventHandler("click", null);
+
+    // Assert
+    expect(component.result).toBe(2);
+  });
+
   it("Should render sum in result div", () => {
     // Arrange
     component.operator1 = 5;
@@ -271,5 +296,20 @@ describe("Ui Addition - Component", () => {
 
     // Assert
     expect(el.innerText).toContain("1");
+  });
+
+  it("Should render sqrt in result div", () => {
+    // Arrange
+    component.operator1 = 4;
+
+    // Act
+    component.sqrt();
+    fixture.detectChanges();
+
+    let de = fixture.debugElement.query(By.css(".result"));
+    let el: HTMLElement = de.nativeElement;
+
+    // Assert
+    expect(el.innerText).toContain("2");
   });
 });

@@ -43,3 +43,8 @@
     cursor: pointer;
     color: yellow;
 }
+
+.division-button {
+    cursor: pointer;
+    color: orange;
+}

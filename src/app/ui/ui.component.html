@@ -1,16 +1,17 @@
 
     <div class="container">
         <div class="calculator">
+            <h1>Calculadora</h1> <!-- Título de la calculadora -->
 
             <form>
                 <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                    <span class="input-group-addon"></span>
                     <input id="operator1" [(ngModel)]="operator1" type="number" class="form-control operator1" name="operator1"
                         placeholder="0.0">
                 </div>
         
                 <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                    <span class="input-group-addon"></span>
                     <input id="operator2" [(ngModel)]="operator2" type="number" class="form-control operator2" name="operator2"
                         placeholder="0.0">
                 </div>
@@ -33,36 +34,3 @@
         <span class="result">{{ result }}</span>
     </div>
 
-
-
-<!-- <div class="calculator">
-
-    <form>
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <input id="operator1" [(ngModel)]="operator1" type="number" class="form-control operator1" name="operator1"
-                placeholder="0.0">
-        </div>
-
-        <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-            <input id="operator2" [(ngModel)]="operator2" type="number" class="form-control operator2" name="operator2"
-                placeholder="0.0">
-        </div>
-    </form>
-
-
-    <button class="operation-button addition-button" (click)="addition()">Suma</button>
-    <button class="operation-button substraction-button" (click)="substraction()">Resta</button>
-    <button class="operation-button exp-button" (click)="exp()">Exponente</button>
-    <button class="operation-button multiplication-button" (click)="multiplication()">Multiplicacion</button>
-    <button class="operation-button division-button" (click)="division()">Division</button>
-    <button class="operation-button square-button" (click)="sqrt()">RaizCuadrado</button>
-    <button class="operation-button sqr-button" (click)="sqr()">Cuadrado</button>
-    <button class="operation-button porcentaje-button" (click)="porcentaje()">Porcentaje</button>
-    <button class="operation-button radianes-button" (click)="radianes()">Radianes</button>
-
-
-</div>
-
-<span class="result">{{ result }}</span> -->

@@ -116,6 +116,20 @@ describe("Ui Addition - Component", () => {
     expect(result).toBe(4);
   });
 
+  it ("should call porcentaje method", () => {
+    // Arrange
+    let result = 0;
+    component.operator1 = 50;
+    component.operator2 = 16;
+
+    // Act
+    component.porcentaje();
+    result = component.result;
+
+    // Assert
+    expect(result).toBe(8);
+  });
+
   it("Should set operator1 model through ngModel", async () => {
     // Arrange
     await fixture.whenStable();
@@ -243,6 +257,19 @@ describe("Ui Addition - Component", () => {
     expect(component.result).toBe(4);
   });
 
+  it("should porcentaje operator1 and operator2 when i click the porcentaje button ", () => {
+    // Arrange
+    component.operator1 = 50;
+    component.operator2 = 16;
+    let porcentajeButton = fixture.debugElement.query(By.css(".porcentaje-button"));
+
+    // Act
+    porcentajeButton.triggerEventHandler("click", null);
+
+    // Assert
+    expect(component.result).toBe(8);
+  });
+
   it("Should render sum in result div", () => {
     // Arrange
     component.operator1 = 5;
@@ -351,5 +378,21 @@ describe("Ui Addition - Component", () => {
 
     // Assert
     expect(el.innerText).toContain("4");
+  });
+
+  it("Should render porcentaje in result div", () => {
+    // Arrange
+    component.operator1 = 50;
+    component.operator2 = 16;
+
+    // Act
+    component.porcentaje();
+    fixture.detectChanges();
+
+    let de = fixture.debugElement.query(By.css(".result"));
+    let el: HTMLElement = de.nativeElement;
+
+    // Assert
+    expect(el.innerText).toContain("8");
   });
 });

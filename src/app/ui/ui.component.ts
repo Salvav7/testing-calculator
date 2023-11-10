@@ -6,6 +6,7 @@ import { multiplication } from "../multiplication/multiplication";
 import { division } from "../division/division";
 import { sqrt } from "../sqrt/sqrt";
 import { sqr } from "../sqr/sqr";
+import { porcentaje } from "../porcentaje/porcentaje";
 
 @Component({
   selector: "app-ui",
@@ -60,6 +61,12 @@ export class UiComponent implements OnInit {
   sqr() {
     let myresult = 0;
     myresult = sqr(this.operator1);
+    this.result = myresult;
+  }
+
+  porcentaje() {
+    let myresult = 0;
+    myresult = porcentaje(this.operator1, this.operator2);
     this.result = myresult;
   }
 }

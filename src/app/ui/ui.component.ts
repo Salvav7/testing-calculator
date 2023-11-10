@@ -5,6 +5,7 @@ import { exp } from "../exp/exp";
 import { multiplication } from "../multiplication/multiplication";
 import { division } from "../division/division";
 import { sqrt } from "../sqrt/sqrt";
+import { sqr } from "../sqr/sqr";
 
 @Component({
   selector: "app-ui",
@@ -53,6 +54,12 @@ export class UiComponent implements OnInit {
   sqrt() {
     let myresult = 0;
     myresult = sqrt(this.operator1);
+    this.result = myresult;
+  }
+
+  sqr() {
+    let myresult = 0;
+    myresult = sqr(this.operator1);
     this.result = myresult;
   }
 }
